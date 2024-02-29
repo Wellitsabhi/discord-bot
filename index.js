@@ -1,4 +1,6 @@
 const { Client, GatewayIntentBits } = require('discord.js');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const client = new Client({ 
     intents: [
@@ -15,4 +17,4 @@ client.on("messageCreate", (message) =>{
     })
 })
 
-client.login("MTIxMjYwMTY3ODQ0NTAyMzMwNA.GPJ7XU._jwUJh56Kw16RjvHrk4jReXH8S1mAl3PRCxl60")
+client.login(process.env.DISCORD_TOKEN)
